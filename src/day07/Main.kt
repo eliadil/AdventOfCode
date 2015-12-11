@@ -9,6 +9,7 @@ import kotlin.text.Regex
 
 fun main(args: Array<String>) {
 
+    val start = System.currentTimeMillis()
     var opResultList: List<Pair<Operation, String>> = emptyList()
     val file = File("resources/day07-02")
     file.forEachLine { line ->
@@ -79,5 +80,6 @@ fun main(args: Array<String>) {
     }
 
     println(values["a"])
+    println(System.currentTimeMillis() - start)
 
 }
